@@ -1,1 +1,1 @@
-
+(require 'color-theme)
