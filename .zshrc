@@ -35,3 +35,6 @@ zstyle ':completion:*' verbose true
 
 zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#)*=0=01;31'
 zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
+alias rmlock='sudo rm /var/lib/pacman/db.lck'
+alias ls='ls --color -a'
+alias rmlock='sudo rm /var/lib/pacman/db.lck'
