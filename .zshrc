@@ -1,5 +1,4 @@
 # Set up the prompt
-
 autoload -Uz promptinit
 promptinit
 prompt adam1
@@ -14,6 +13,8 @@ HISTSIZE=1000
 SAVEHIST=1000
 HISTFILE=~/.zsh_history
 
+#set ZSHDOTDIR 
+#
 # Use modern completion system
 autoload -Uz compinit
 compinit
@@ -35,6 +36,7 @@ zstyle ':completion:*' verbose true
 
 zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#)*=0=01;31'
 zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
+
+#aliases :D
 alias rmlock='sudo rm /var/lib/pacman/db.lck'
 alias ls='ls --color -a'
-alias rmlock='sudo rm /var/lib/pacman/db.lck'
