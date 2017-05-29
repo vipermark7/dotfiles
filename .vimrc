@@ -22,13 +22,12 @@ set nocompatible
 set backspace=indent,eol,start
 set nocompatible              " be iMproved, required
 filetype off                  " required
+set t_Co=256
+set bg=dark 
+colorscheme gruvbox
 
 " set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
 
-Bundle 'tpope/vim-rails.git'
-Bundle 'Lokaltog/powerline.git'
 
 if has("vms")
   set nobackup		" do not keep a backup file, use versions instead
@@ -42,8 +41,6 @@ set showcmd		" display incomplete commands
 set incsearch		" do incremental searching
 set number
 set autoread " Automatically reload changes if detected
-set nu 
-colorscheme gruvbox
 
 " For Win32 GUI: remove 't' flag from 'guioptions': no tearoff menu entries
 " let &guioptions = substitute(&guioptions, "t", "", "g")
@@ -65,10 +62,9 @@ endif
 if &t_Co > 2 || has("gui_running")
   syntax on
   set hlsearch
-  set t_Co=256
-  set nu 
-  set bg=dark
-  colorscheme gruvbox
+  t_Co=256
+  nu
+  colorscheme=gruvbox 
 endif
 
 " Only do this part when compiled with support for autocommands.
