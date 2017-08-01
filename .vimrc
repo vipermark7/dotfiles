@@ -41,6 +41,7 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'posva/vim-vue'
 Plugin 'tpope/vim-rails'
+Plugin 'morhetz/gruvbox'
 
 " plugin from http://vim-scripts.org/vim/scripts.html
 " Plugin 'L9'
@@ -107,7 +108,6 @@ if &t_Co > 2 || has("gui_running")
   set hlsearch
   set t_Co=256
   set nu
-  colorscheme gruvbox 
 endif
 
 " Only do this part when compiled with support for autocommands.
