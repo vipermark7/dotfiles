@@ -16,7 +16,6 @@ endif
 
 " Use Vim settings, rather than Vi settings (much better!).
 " This must be first, because it changes other options as a side effect.
-set nocompatible
 
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start
@@ -40,7 +39,11 @@ Plugin 'VundleVim/Vundle.vim'
 " plugin on GitHub repo
 Plugin 'tpope/vim-fugitive'
 Plugin 'airblade/vim-gitgutter'
-Plugin 'posva/vim-vue'     
+Plugin 'posva/vim-vue'
+Plugin 'tpope/vim-rails'
+Plugin 'morhetz/gruvbox'
+Plugin 'davidhalter/jedi-vim'
+Plugin 'flazz/vim-colorschemes'
 " plugin from http://vim-scripts.org/vim/scripts.html
 " Plugin 'L9'
 " Git plugin not hosted on GitHub
@@ -52,6 +55,7 @@ Plugin 'posva/vim-vue'
 "Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 " Install L9 and avoid a Naming conflict if you've already installed a
 " different version somewhere else.
+
 " Plugin 'ascenator/L9', {'name': 'newL9'}
 
 " All of your Plugins must be added before the following line
@@ -105,7 +109,6 @@ if &t_Co > 2 || has("gui_running")
   set hlsearch
   set t_Co=256
   set nu
-  colorscheme gruvbox 
 endif
 
 " Only do this part when compiled with support for autocommands.
@@ -151,4 +154,3 @@ set expandtab
 set shiftwidth=2
 set softtabstop=2
 filetype plugin indent on
-

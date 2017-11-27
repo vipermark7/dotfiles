@@ -42,7 +42,8 @@ Plugin 'airblade/vim-gitgutter'
 Plugin 'posva/vim-vue'
 Plugin 'tpope/vim-rails'
 Plugin 'morhetz/gruvbox'
-
+Plugin 'davidhalter/jedi-vim'
+Plugin 'flazz/vim-colorschemes'
 " plugin from http://vim-scripts.org/vim/scripts.html
 " Plugin 'L9'
 " Git plugin not hosted on GitHub
