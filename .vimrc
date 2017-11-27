@@ -22,7 +22,7 @@ set backspace=indent,eol,start
 set nocompatible              " be iMproved, required
 filetype off                  " required
 set t_Co=256
-set bg=dark 
+set bg=light 
 colorscheme gruvbox
 
 " set the runtime path to include Vundle and initialize
