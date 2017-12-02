@@ -23,7 +23,6 @@ set nocompatible              " be iMproved, required
 filetype off                  " required
 set t_Co=256
 set bg=dark 
-colorscheme gruvbox
 
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -44,6 +43,7 @@ Plugin 'tpope/vim-rails'
 Plugin 'morhetz/gruvbox'
 Plugin 'davidhalter/jedi-vim'
 Plugin 'flazz/vim-colorschemes'
+colorscheme gruvbox
 " plugin from http://vim-scripts.org/vim/scripts.html
 " Plugin 'L9'
 " Git plugin not hosted on GitHub

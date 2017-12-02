@@ -22,8 +22,7 @@ set backspace=indent,eol,start
 set nocompatible              " be iMproved, required
 filetype off                  " required
 set t_Co=256
-set bg=light 
-colorscheme gruvbox
+set bg=dark 
 
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -109,6 +108,8 @@ if &t_Co > 2 || has("gui_running")
   set hlsearch
   set t_Co=256
   set nu
+  set bg=dark
+  colorscheme gruvbox
 endif
 
 " Only do this part when compiled with support for autocommands.
