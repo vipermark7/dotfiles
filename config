@@ -35,8 +35,6 @@ bindsym $mod+t exec thunar
 bindsym $mod+g exec google-chrome
 bindsym mod+p exec vlc 
 
-exec --no-startup-id nitrogen --restore
-exec --no-startup-id  nm-applet 
 # kill focused window
 bindsym $mod+Shift+q kill
 
