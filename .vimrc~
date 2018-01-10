@@ -43,7 +43,11 @@ Plugin 'tpope/vim-rails'
 Plugin 'morhetz/gruvbox'
 Plugin 'davidhalter/jedi-vim'
 Plugin 'flazz/vim-colorschemes'
-colorscheme gruvbox
+Plugin 'icymind/NeoSolarized'
+Plugin 'yosiat/oceanic-next-vim'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+
 " plugin from http://vim-scripts.org/vim/scripts.html
 " Plugin 'L9'
 " Git plugin not hosted on GitHub
@@ -109,6 +113,10 @@ if &t_Co > 2 || has("gui_running")
   set hlsearch
   set t_Co=256
   set nu
+  set bg=dark
+  colorscheme OceanicNext 
+  set termguicolors
+  
 endif
 
 " Only do this part when compiled with support for autocommands.
