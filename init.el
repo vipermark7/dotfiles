@@ -4,6 +4,7 @@
 (add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/"))
 (add-to-list 'package-archives '("marmalade". "http://marmalade-repo.org/packages/"))
 (add-to-list 'package-archives '("gnu". "http://elpa.gnu.org/packages/"))
+(cua-mode t)
 
 (package-initialize)
 
@@ -50,7 +51,7 @@
  '(hl-fg-colors
    (quote
     ("#002b36" "#002b36" "#002b36" "#002b36" "#002b36" "#002b36" "#002b36" "#002b36")))
- '(magit-diff-use-overlays nil)
+ '(magit-diff-use-overlays t)
  '(nrepl-message-colors
    (quote
     ("#dc322f" "#cb4b16" "#b58900" "#546E00" "#B4C342" "#00629D" "#2aa198" "#d33682" "#6c71c4")))
