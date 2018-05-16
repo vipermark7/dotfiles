@@ -7,7 +7,7 @@
 (cua-mode t)
 
 (package-initialize)
-
+(setq ring-bell-function 'ignore)
 ;; Set your lisp system and, optionally, some contribs
 (setq inferior-lisp-program "/usr/bin/sbcl")
 (setq slime-contribs '(slime-fancy))
@@ -57,7 +57,7 @@
     ("#dc322f" "#cb4b16" "#b58900" "#546E00" "#B4C342" "#00629D" "#2aa198" "#d33682" "#6c71c4")))
  '(package-selected-packages
    (quote
-    (python-environment evil sotlisp solarized-theme ac-slime python-pytest python-mode py-autopep8si gruvbox-theme shell-switcher python-django pylint color-theme-modern color-theme-solarized slime)))
+    (python-environment evil sotlisp solarized-theme ac-slime python-pytest python-mode py-autopep8si gruvbox-theme shell-switcher python-django pylint color-theme-modern color-theme-solarized slime cider-mode yaml-mode base16-theme)))
  '(pos-tip-background-color "#073642")
  '(pos-tip-foreground-color "#93a1a1")
  '(show-paren-mode t)
