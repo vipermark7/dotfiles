@@ -4,6 +4,8 @@
 (setq cider-allow-jack-in-without-project t)
 
 (require 'package)
+(require 'evil)
+(evil-mode 1)
 (add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/"))
 (add-to-list 'package-archives '("marmalade". "http://marmalade-repo.org/packages/"))
 (add-to-list 'package-archives '("gnu". "http://elpa.gnu.org/packages/"))
