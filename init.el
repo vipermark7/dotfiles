@@ -4,13 +4,11 @@
 (setq cider-allow-jack-in-without-project t)
 
 (require 'package)
-(require 'evil)
-(evil-mode 1)
+
 (add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/"))
 (add-to-list 'package-archives '("marmalade". "http://marmalade-repo.org/packages/"))
 (add-to-list 'package-archives '("gnu". "http://elpa.gnu.org/packages/"))
 (cua-mode t)
-(evil-mode t)
 (package-initialize)
 (setq ring-bell-function 'ignore)
 (setf visible-bell t)
@@ -61,6 +59,7 @@
  '(package-selected-packages
    (quote
     (python-environment evil sotlisp solarized-theme ac-slime python-pytest python-mode py-autopep8si gruvbox-theme shell-switcher python-django pylint color-theme-modern color-theme-solarized slime cider-mode yaml-mode base16-theme)))
+(package-install-selected-packages)
  '(pos-tip-background-color "#073642")
  '(pos-tip-foreground-color "#93a1a1")
  '(show-paren-mode t)
@@ -112,3 +111,5 @@
  '(package-selected-packages
    (quote
     (obsidian-theme flycheck ivy elpy yaml-mode slime-theme slime paredit oceanic-theme gruvbox-theme evil-visual-mark-mode evil-magit enh-ruby-mode color-theme-zenburn color-theme-x color-theme-wombat color-theme-vim-insert-mode color-theme-twilight color-theme-tangotango color-theme-tango color-theme-solarized color-theme-sanityinc-tomorrow color-theme-sanityinc-solarized color-theme-railscasts color-theme-monokai color-theme-molokai color-theme-modern color-theme-library color-theme-ir-black color-theme-heroku color-theme-gruber-darker color-theme-github color-theme-emacs-revert-theme color-theme-eclipse color-theme-dpaste color-theme-dg color-theme-complexity color-theme-cobalt color-theme-buffer-local color-theme-approximate color-theme-actress base16-theme badwolf-theme ac-cider))))
+(require 'evil)
+(evil-mode 1)
