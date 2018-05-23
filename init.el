@@ -12,7 +12,7 @@
 (package-initialize)
 (setq ring-bell-function 'ignore)
 (setf visible-bell t)
-(load-theme 'base16-oceanicnext t)
+
 
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
@@ -56,9 +56,10 @@
  '(nrepl-message-colors
    (quote
     ("#dc322f" "#cb4b16" "#b58900" "#546E00" "#B4C342" "#00629D" "#2aa198" "#d33682" "#6c71c4")))
- '(package-selected-packages
+  '(package-selected-packages
    (quote
-    (python-environment evil sotlisp solarized-theme ac-slime python-pytest python-mode py-autopep8si gruvbox-theme shell-switcher python-django pylint color-theme-modern color-theme-solarized slime cider-mode yaml-mode base16-theme)))
+    (obsidian-theme flycheck ivy elpy yaml-mode slime-theme slime paredit oceanic-theme gruvbox-theme evil-visual-mark-mode evil-magit enh-ruby-mode color-theme-zenburn color-theme-x color-theme-wombat color-theme-vim-insert-mode color-theme-twilight color-theme-tangotango color-theme-tango color-theme-solarized color-theme-sanityinc-tomorrow color-theme-sanityinc-solarized color-theme-railscasts color-theme-monokai color-theme-molokai color-theme-modern color-theme-library color-theme-ir-black color-theme-heroku color-theme-gruber-darker color-theme-github color-theme-emacs-revert-theme color-theme-eclipse color-theme-dpaste color-theme-dg color-theme-complexity color-theme-cobalt color-theme-buffer-local color-theme-approximate color-theme-actress base16-theme badwolf-theme ac-cider)))
+(package-refresh-contents)
 (package-install-selected-packages)
  '(pos-tip-background-color "#073642")
  '(pos-tip-foreground-color "#93a1a1")
@@ -108,8 +109,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(package-selected-packages
-   (quote
-    (obsidian-theme flycheck ivy elpy yaml-mode slime-theme slime paredit oceanic-theme gruvbox-theme evil-visual-mark-mode evil-magit enh-ruby-mode color-theme-zenburn color-theme-x color-theme-wombat color-theme-vim-insert-mode color-theme-twilight color-theme-tangotango color-theme-tango color-theme-solarized color-theme-sanityinc-tomorrow color-theme-sanityinc-solarized color-theme-railscasts color-theme-monokai color-theme-molokai color-theme-modern color-theme-library color-theme-ir-black color-theme-heroku color-theme-gruber-darker color-theme-github color-theme-emacs-revert-theme color-theme-eclipse color-theme-dpaste color-theme-dg color-theme-complexity color-theme-cobalt color-theme-buffer-local color-theme-approximate color-theme-actress base16-theme badwolf-theme ac-cider))))
+)
 (require 'evil)
 (evil-mode 1)
+(load-theme 'base16-oceanicnext)
