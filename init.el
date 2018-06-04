@@ -2,6 +2,7 @@
 (setq user-mail-address "shaffan1996@gmail.com")
 (setq project-default-licence "GPL")
 (setq cider-allow-jack-in-without-project t)
+(setq inferior-lisp-program "/usr/bin/clisp")
 
 (require 'package)
 
