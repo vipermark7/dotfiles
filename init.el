@@ -30,5 +30,6 @@
   (configuration-layer/sync)
   (spacemacs-buffer/display-startup-note)
   (spacemacs/setup-startup-hook)
+  (spacemacs/toggle-menu-bar)
   (require 'server)
   (unless (server-running-p) (server-start)))
