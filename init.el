@@ -33,3 +33,13 @@
   (spacemacs/toggle-menu-bar)
   (require 'server)
   (unless (server-running-p) (server-start)))
+
+;; my stuff :) 
+'(package-selected-packages
+  (base16-theme ac-cider clomacs sotlisp))
+
+(package-install-selected-packages)
+(package-refresh-contents)
+(cua-mode t)
+(setq cider-allow-jack-in-without-project t)
+(setq inferior-lisp-program "/usr/bin/sbcl")
