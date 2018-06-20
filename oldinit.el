@@ -2,13 +2,12 @@
 (setq user-mail-address "shaffan1996@gmail.com")
 (setq project-default-licence "GPL")
 
-(require 'package)
+
 (add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/"))
 (add-to-list 'package-archives '("marmalade". "http://marmalade-repo.org/packages/"))
 (add-to-list 'package-archives '("gnu". "http://elpa.gnu.org/packages/"))
 (cua-mode t)
-(inhibit-startup-screen t)
-(show-paren-mode t)
+'(inhibit-startup-screen t)
 
 
 (package-initialize)
@@ -27,11 +26,10 @@
     "021720af46e6e78e2be7875b2b5b05344f4e21fad70d17af7acfd6922386b61e"
     "e1498b2416922aa561076edc5c9b0ad7b34d8ff849f335c13364c8f4276904f0"
     default)))
- 
  '(package-selected-packages
    (quote
-    (gruvbox-theme gruvbox-themeu rainbow-identifiers ws-butler winum
- which-key volatile-highlights vi-tilde-fringe uuidgen
+    (gruvbox-theme gruvbox-theme paredit rainbow-identifiers ws-butler winum
+ which-key volatile-highlights vi-tilde-fringe uuidgen use-package
  toc-org spaceline slime restart-emacs request rainbow-delimiters
  popwin persp-mode pcre2el paradox org-plus-contrib org-bullets
  open-junk-file neotree multi-term move-text lorem-ipsum
@@ -48,11 +46,24 @@
  evil-anzu eval-sexp-fu elisp-slime-nav dumb-jump diminish define-word
  column-enforce-mode clomacs clean-aindent-mode base16-theme
  auto-highlight-symbol auto-compile aggressive-indent adaptive-wrap
- ace-window ace-link ace-jump-helm-line ac-cider)))
+ ace-window ace-link ace-jump-helm-line ac-cider))))
+(package-refresh-contents)
+(package-install-selected-packages)
+(require 'package)
+(require 'evil)
+(require 'paredit)
+'(show-paren-mode t)
+(setq show-paren-style 'expression)
+(electric-pair-mode 1)
+(load-theme 'gruvbox-dark-medium 'no-confirm)
+(evil-mode 1)
+(paredit-mode 1) 
+
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- )
+)
+
 
