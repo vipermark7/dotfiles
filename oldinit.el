@@ -1,101 +1,54 @@
 (setq user-full-name "Shaffan")
 (setq user-mail-address "shaffan1996@gmail.com")
 (setq project-default-licence "GPL")
-(setq cider-allow-jack-in-without-project t)
-(setq inferior-lisp-program "/usr/bin/clisp")
 
 (require 'package)
-
 (add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/"))
 (add-to-list 'package-archives '("marmalade". "http://marmalade-repo.org/packages/"))
 (add-to-list 'package-archives '("gnu". "http://elpa.gnu.org/packages/"))
 (cua-mode t)
+(inhibit-startup-screen t)
+(show-paren-mode t)
+
+
 (package-initialize)
-(setq ring-bell-function 'ignore)
-(setf visible-bell t)
 
-
+;; Set your lisp system and, optionally, some contribs
+(setq inferior-lisp-program "/usr/bin/sbcl")
+(setq slime-contribs '(slime-fancy))
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(ansi-color-names-vector
-   ["#073642" "#dc322f" "#859900" "#b58900" "#268bd2" "#d33682" "#2aa198" "#657b83"])
- '(compilation-message-face (quote default))
- '(cua-global-mark-cursor-color "#2aa198")
- '(cua-normal-cursor-color "#839496")
- '(cua-overwrite-cursor-color "#b58900")
- '(cua-read-only-cursor-color "#859900")
- '(custom-enabled-themes (quote (oceanic)))
- '(fci-rule-color "#073642")
- '(highlight-changes-colors (quote ("#d33682" "#6c71c4")))
- '(highlight-symbol-colors
-   (--map
-    (solarized-color-blend it "#002b36" 0.25)
-    (quote
-     ("#b58900" "#2aa198" "#dc322f" "#6c71c4" "#859900" "#cb4b16" "#268bd2"))))
- '(highlight-symbol-foreground-color "#93a1a1")
- '(highlight-tail-colors
+ '(custom-safe-themes
    (quote
-    (("#073642" . 0)
-     ("#546E00" . 20)
-     ("#00736F" . 30)
-     ("#00629D" . 50)
-     ("#7B6000" . 60)
-     ("#8B2C02" . 70)
-     ("#93115C" . 85)
-     ("#073642" . 100))))
- '(hl-bg-colors
+    ("3380a2766cf0590d50d6366c5a91e976bdc3c413df963a0ab9952314b4577299"
+    "021720af46e6e78e2be7875b2b5b05344f4e21fad70d17af7acfd6922386b61e"
+    "e1498b2416922aa561076edc5c9b0ad7b34d8ff849f335c13364c8f4276904f0"
+    default)))
+ 
+ '(package-selected-packages
    (quote
-    ("#7B6000" "#8B2C02" "#990A1B" "#93115C" "#3F4D91" "#00629D" "#00736F" "#546E00")))
- '(hl-fg-colors
-   (quote
-    ("#002b36" "#002b36" "#002b36" "#002b36" "#002b36" "#002b36" "#002b36" "#002b36")))
- '(magit-diff-use-overlays t)
- '(nrepl-message-colors
-   (quote
-    ("#dc322f" "#cb4b16" "#b58900" "#546E00" "#B4C342" "#00629D" "#2aa198" "#d33682" "#6c71c4")))
-  '(package-selected-packages
-   (quote
-    (adoc obsidian-theme helm elpy yaml-mode slime-theme slime paredit oceanic-theme gruvbox-theme evil-visual-mark-mode evil-magit enh-ruby-mode base16-theme badwolf-theme ac-cider
-     racket-mode slinav portacle undo-tree fly)))
-(package-refresh-contents)
-(package-install-selected-packages)
- '(pos-tip-background-color "#073642")
- '(pos-tip-foreground-color "#93a1a1")
- '(show-paren-mode t)
- '(smartrep-mode-line-active-bg (solarized-color-blend "#859900" "#073642" 0.2))
- '(term-default-bg-color "#002b36")
- '(term-default-fg-color "#839496")
- '(vc-annotate-background nil)
- '(vc-annotate-background-mode nil)
- '(vc-annotate-color-map
-   (quote
-    ((20 . "#dc322f")
-     (40 . "#c85d17")
-     (60 . "#be730b")
-     (80 . "#b58900")
-     (100 . "#a58e00")
-     (120 . "#9d9100")
-     (140 . "#959300")
-     (160 . "#8d9600")
-     (180 . "#859900")
-     (200 . "#669b32")
-     (220 . "#579d4c")
-     (240 . "#489e65")
-     (260 . "#399f7e")
-     (280 . "#2aa198")
-     (300 . "#2898af")
-     (320 . "#2793ba")
-     (340 . "#268fc6")
-     (360 . "#268bd2"))))
- '(vc-annotate-very-old-color nil)
- '(weechat-color-list
-   (quote
-    (unspecified "#002b36" "#073642" "#990A1B" "#dc322f" "#546E00" "#859900" "#7B6000" "#b58900" "#00629D" "#268bd2" "#93115C" "#d33682" "#00736F" "#2aa198" "#839496" "#657b83")))
- '(xterm-color-names
-   ["#073642" "#dc322f" "#859900" "#b58900" "#268bd2" "#d33682" "#2aa198" "#eee8d5"])
- '(xterm-color-names-bright
-   ["#002b36" "#cb4b16" "#586e75" "#657b83" "#839496" "#6c71c4" "#93a1a1" "#fdf6e3"])
+    (gruvbox-theme gruvbox-themeu rainbow-identifiers ws-butler winum
+ which-key volatile-highlights vi-tilde-fringe uuidgen
+ toc-org spaceline slime restart-emacs request rainbow-delimiters
+ popwin persp-mode pcre2el paradox org-plus-contrib org-bullets
+ open-junk-file neotree multi-term move-text lorem-ipsum
+ linum-relative link-hint indent-guide hungry-delete hl-todo
+ highlight-parentheses highlight-numbers highlight-indentation
+ helm-themes helm-swoop helm-projectile helm-mode-manager helm-make
+ helm-flx helm-descbinds helm-cider helm-ag google-translate
+ golden-ratio flx-ido fill-column-indicator fancy-battery eyebrowse
+ expand-region exec-path-from-shell evil-visualstar
+ evil-visual-mark-mode evil-unimpaired evil-tutor evil-surround
+ evil-search-highlight-persist evil-numbers evil-nerd-commenter
+ evil-mc evil-matchit evil-lisp-state evil-indent-plus
+ evil-iedit-state evil-exchange evil-escape evil-ediff evil-args
+ evil-anzu eval-sexp-fu elisp-slime-nav dumb-jump diminish define-word
+ column-enforce-mode clomacs clean-aindent-mode base16-theme
+ auto-highlight-symbol auto-compile aggressive-indent adaptive-wrap
+ ace-window ace-link ace-jump-helm-line ac-cider)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -103,12 +56,3 @@
  ;; If there is more than one, they won't work right.
  )
 
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
-)
-(require 'evil)
-(evil-mode 1)
-(load-theme 'base16-oceanicnext)
