@@ -309,8 +309,17 @@ layers configuration.
 This is the place where most of your configurations should be done. Unless it is
 explicitly specified that a variable should be set before a package is loaded,
 you should place your code here."
+  (cua-mode t)
   (menu-bar-mode 1)
-
+  (setq inferior-lisp-program "/usr/bin/sbcl")
+  (setq slime-contribs '(slime-fancy))
+  (add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/"))
+  (add-to-list 'package-archives '("marmalade". "http://marmalade-repo.org/packages/"))
+  (add-to-list 'package-archives '("gnu". "http://elpa.gnu.org/packages/"))
+  (package-initialize)
+  '(package-selected-packages  '(gruvbox-theme slime multi-term ac-cider elpy base-16-theme ))
+  (package-refresh-contents)
+  (package-install-selected-packages)
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
