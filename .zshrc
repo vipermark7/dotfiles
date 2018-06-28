@@ -92,3 +92,5 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+export PATH=$PATH:/mnt/c/Program\ Files\ \(x86\)/Xming/
+alias win_emacs="Xming.exe && lxqt-sudo dropbear && export DISPLAY=:0 && emacs26"
