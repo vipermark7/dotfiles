@@ -319,7 +319,7 @@ you should place your code here."
   (add-to-list 'package-archives '("gnu". "http://elpa.gnu.org/packages/"))
   (package-initialize)
   (package-refresh-contents)
-  (visual-line-mode 1)
+  (visual-line-mode 1))
 
 ;; Do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.
@@ -329,12 +329,33 @@ you should place your code here."
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(custom-safe-themes
-   (quote
-    ("a5956ec25b719bf325e847864e16578c61d8af3e8a3d95f60f9040d02497e408" "f27c3fcfb19bf38892bc6e72d0046af7a1ded81f54435f9d4d09b3bff9c52fc1" "021720af46e6e78e2be7875b2b5b05344f4e21fad70d17af7acfd6922386b61e" "5a7830712d709a4fc128a7998b7fa963f37e960fd2e8aa75c76f692b36e6cf3c" default)))
+   '("a5956ec25b719bf325e847864e16578c61d8af3e8a3d95f60f9040d02497e408"
+     "f27c3fcfb19bf38892bc6e72d0046af7a1ded81f54435f9d4d09b3bff9c52fc1"
+     "021720af46e6e78e2be7875b2b5b05344f4e21fad70d17af7acfd6922386b61e"
+     "5a7830712d709a4fc128a7998b7fa963f37e960fd2e8aa75c76f692b36e6cf3c" default))
  '(evil-want-Y-yank-to-eol nil)
  '(package-selected-packages
-   (quote
-    (powerline spinner hydra parent-mode projectile pkg-info epl flx smartparens iedit anzu evil goto-chg undo-tree highlight f dash s bind-map bind-key packed avy popup async helm helm-core rvm ruby-tools ruby-test-mode rubocop rspec-mode robe rbenv rake minitest chruby bundler inf-ruby multi-term cider-spy base16-theme color-theme-cobalt gruvbox-theme slime ac-cider ws-butler winum which-key volatile-highlights vi-tilde-fringe uuidgen use-package toc-org spaceline restart-emacs request rainbow-delimiters popwin persp-mode pcre2el paradox org-plus-contrib org-bullets open-junk-file neotree move-text macrostep lorem-ipsum linum-relative link-hint indent-guide hungry-delete hl-todo highlight-parentheses highlight-numbers highlight-indentation helm-themes helm-swoop helm-projectile helm-mode-manager helm-make helm-flx helm-descbinds helm-ag google-translate golden-ratio flx-ido fill-column-indicator fancy-battery eyebrowse expand-region exec-path-from-shell evil-visualstar evil-visual-mark-mode evil-unimpaired evil-tutor evil-surround evil-search-highlight-persist evil-numbers evil-nerd-commenter evil-mc evil-matchit evil-lisp-state evil-indent-plus evil-iedit-state evil-exchange evil-escape evil-ediff evil-args evil-anzu eval-sexp-fu elisp-slime-nav dumb-jump diminish define-word column-enforce-mode clean-aindent-mode auto-highlight-symbol auto-compile aggressive-indent adaptive-wrap ace-window ace-link ace-jump-helm-line))))
+    '(powerline spinner hydra parent-mode projectile pkg-info epl flx smartparens
+    iedit anzu evil goto-chg undo-tree highlight f dash s bind-map bind-key
+    packed avy popup async helm helm-core rvm ruby-tools ruby-test-mode rubocop
+    rspec-mode robe rbenv rake minitest chruby bundler inf-ruby multi-term
+    cider-spy base16-theme color-theme-cobalt gruvbox-theme slime ac-cider
+    ws-butler winum which-key volatile-highlights vi-tilde-fringe uuidgen
+    use-package toc-org spaceline restart-emacs request rainbow-delimiters
+    popwin persp-mode pcre2el paradox org-plus-contrib org-bullets
+    open-junk-file neotree move-text macrostep lorem-ipsum linum-relative
+    link-hint indent-guide hungry-delete hl-todo highlight-parentheses
+    highlight-numbers highlight-indentation helm-themes helm-swoop
+    helm-projectile helm-mode-manager helm-make helm-flx helm-descbinds helm-ag
+    google-translate golden-ratio flx-ido fill-column-indicator fancy-battery
+    eyebrowse expand-region exec-path-from-shell evil-visualstar
+    evil-visual-mark-mode evil-unimpaired evil-tutor evil-surround
+    evil-search-highlight-persist evil-numbers evil-nerd-commenter evil-mc
+    evil-matchit evil-lisp-state evil-indent-plus evil-iedit-state evil-exchange
+    evil-escape evil-ediff evil-args evil-anzu eval-sexp-fu elisp-slime-nav
+    dumb-jump diminish define-word column-enforce-mode clean-aindent-mode
+    auto-highlight-symbol auto-compile aggressive-indent adaptive-wrap
+    ace-window ace-link ace-jump-helm-line))
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
