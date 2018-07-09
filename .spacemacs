@@ -319,8 +319,8 @@ you should place your code here."
   (add-to-list 'package-archives '("gnu". "http://elpa.gnu.org/packages/"))
   (package-initialize)
   (package-refresh-contents)
-  (visual-line-mode 1))
-
+  (visual-line-mode 1)
+  (global-linum-mode 1))
 ;; Do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.
 (custom-set-variables
