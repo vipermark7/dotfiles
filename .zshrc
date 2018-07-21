@@ -95,3 +95,4 @@ source $ZSH/oh-my-zsh.sh
 export PATH=$PATH:/mnt/c/Program\ Files\ \(x86\)/Xming/
 alias win_emacs="Xming.exe && lxqt-sudo dropbear && export DISPLAY=:0 && emacs26"
 alias ls="ls -a --color"
+export DISPLAY=:0
