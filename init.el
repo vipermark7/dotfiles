@@ -30,33 +30,35 @@
     default)))
  '(package-selected-packages
    (quote
-    (gruvbox-theme gruvbox-theme paredit rainbow-identifiers ws-butler winum
- which-key volatile-highlights vi-tilde-fringe uuidgen use-package
- toc-org spaceline slime restart-emacs request rainbow-delimiters
- popwin persp-mode pcre2el paradox org-plus-contrib org-bullets
- open-junk-file neotree multi-term move-text lorem-ipsum
- linum-relative link-hint indent-guide hungry-delete hl-todo
- highlight-parentheses highlight-numbers highlight-indentation
- helm-themes helm-swoop helm-projectile helm-mode-manager helm-make
- helm-flx helm-descbinds helm-cider helm-ag google-translate
- golden-ratio flx-ido fill-column-indicator fancy-battery eyebrowse
- expand-region exec-path-from-shell evil-visualstar
- evil-visual-mark-mode evil-unimpaired evil-tutor evil-surround
- evil-search-highlight-persist evil-numbers evil-nerd-commenter
- evil-mc evil-matchit evil-lisp-state evil-indent-plus
- evil-iedit-state evil-exchange evil-escape evil-ediff evil-args
- evil-anzu eval-sexp-fu elisp-slime-nav dumb-jump diminish define-word
- column-enforce-mode clomacs clean-aindent-mode base16-theme
+    ( ace-window ace-link ace-jump-helm-line ac-cider)
  auto-highlight-symbol auto-compile aggressive-indent adaptive-wrap
- ace-window ace-link ace-jump-helm-line ac-cider))))
+ column-enforce-mode clomacs clean-aindent-mode base16-theme
+ evil-anzu eval-sexp-fu elisp-slime-nav dumb-jump diminish define-word
+ evil-iedit-state evil-exchange evil-escape evil-ediff evil-args
+ evil-mc evil-matchit evil-lisp-state evil-indent-plus
+ evil-search-highlight-persist evil-numbers evil-nerd-commenter
+ evil-visual-mark-mode evil-unimpaired evil-tutor evil-surround
+ expand-region exec-path-from-shell evil-visualstar
+ golden-ratio flx-ido fill-column-indicator fancy-battery eyebrowse
+ helm-flx helm-descbinds helm-cider helm-ag google-translate
+ helm-themes helm-swoop helm-projectile helm-mode-manager helm-make
+ highlight-parentheses highlight-numbers highlight-indentation
+ linum-relative link-hint indent-guide hungry-delete hl-todo
+ open-junk-file neotree multi-term move-text lorem-ipsum
+ popwin persp-mode pcre2el paradox org-plus-contrib org-bullets
+ toc-org spaceline slime restart-emacs request rainbow-delimiters
+ which-key volatile-highlights vi-tilde-fringe uuidgen use-package
+gruvbox-theme gruvbox-theme paredit rainbow-identifiers ws-butler winum)))
 (package-refresh-contents)
 (package-install-selected-packages)
-'(show-paren-mode t)
+;; sort the list of selected packages alphabetically
+(sort-lines (package-selected-packages))
+(setq show-paren-mode t)
 (setq show-paren-style 'expression)
-(electric-pair-mode 1)
+(setq electric-pair-mode 1)
 (load-theme 'gruvbox-dark-medium 'no-confirm)
-(evil-mode 1)
-(paredit-mode 1) 
+(setq evil-mode 1)
+(setq paredit-mode 1)
 
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
