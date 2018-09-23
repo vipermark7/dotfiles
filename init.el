@@ -1,10 +1,8 @@
 (setq user-full-name "Shaffan")
 (setq user-mail-address "shaffan1996@gmail.com")
 (setq project-default-licence "GPL")
-
 (require 'package)
-(require 'evil)
-(require 'paredit)
+
 (add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/"))
 (add-to-list 'package-archives '("marmalade". "http://marmalade-repo.org/packages/"))
 (add-to-list 'package-archives '("gnu". "http://elpa.gnu.org/packages/"))
@@ -12,8 +10,9 @@
 '(inhibit-startup-screen t)
 (setq initial-frame-alist '((top . 30) (left . 700) (width . 212) (height . 81)))
 
-(package-initialize)
 
+(package-initialize)
+(setq show-paren-mode 1)
 ;; Set your lisp system and, optionally, some contribs
 (setq inferior-lisp-program "/usr/bin/sbcl")
 (setq slime-contribs '(slime-fancy))
@@ -30,7 +29,7 @@
     default)))
  '(package-selected-packages
    (quote
-    ( ace-window ace-link ace-jump-helm-line ac-cider)
+    ( ace-window ace-link ace-jump-helm-line ac-cider
  auto-highlight-symbol auto-compile aggressive-indent adaptive-wrap
  column-enforce-mode clomacs clean-aindent-mode base16-theme
  evil-anzu eval-sexp-fu elisp-slime-nav dumb-jump diminish define-word
@@ -48,18 +47,12 @@
  popwin persp-mode pcre2el paradox org-plus-contrib org-bullets
  toc-org spaceline slime restart-emacs request rainbow-delimiters
  which-key volatile-highlights vi-tilde-fringe uuidgen use-package
-gruvbox-theme gruvbox-theme paredit rainbow-identifiers ws-butler winum)))
+gruvbox-theme gruvbox-theme paredit rainbow-identifiers ws-butler winum))))
 (package-refresh-contents)
 (package-install-selected-packages)
-;; sort the list of selected packages alphabetically
-(sort-lines (package-selected-packages))
-(setq show-paren-mode t)
-(setq show-paren-style 'expression)
-(setq electric-pair-mode 1)
-(load-theme 'gruvbox-dark-medium 'no-confirm)
-(setq evil-mode 1)
-(setq paredit-mode 1)
 
+(require 'evil)
+(require 'paredit)
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
