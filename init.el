@@ -10,7 +10,7 @@
 (add-to-list 'package-archives '("gnu". "http://elpa.gnu.org/packages/"))
 (cua-mode t)
 '(inhibit-startup-screen t)
-
+(setq initial-frame-alist '((top . 30) (left . 700) (width . 212) (height . 81)))
 
 (package-initialize)
 
