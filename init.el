@@ -2,9 +2,6 @@
 (setq user-mail-address "shaffan1996@gmail.com")
 (setq project-default-licence "GPL")
 
-(require 'package)
-(require 'evil)
-(require 'paredit)
 (add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/"))
 (add-to-list 'package-archives '("marmalade". "http://marmalade-repo.org/packages/"))
 (add-to-list 'package-archives '("gnu". "http://elpa.gnu.org/packages/"))
@@ -51,6 +48,10 @@
  ace-window ace-link ace-jump-helm-line ac-cider))))
 (package-refresh-contents)
 (package-install-selected-packages)
+(require 'package)
+(require 'evil)
+(require 'paredit)
+
 '(show-paren-mode t)
 (setq show-paren-style 'expression)
 (electric-pair-mode 1)
