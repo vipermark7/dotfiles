@@ -45,11 +45,9 @@
 
 
 (visual-line-mode 1)
-'(show-paren-mode t)
-(setq show-paren-style 'expression)
-(electric-pair-mode 1)
-(load-theme 'gruvbox-dark-medium 'no-confirm)
-
+(show-paren-mode t)
+(load-theme 'base16-solarized-dark 'no-confirm)
+(add-hook 'prog-mode-hook #'rainbow-delimiters-mode)
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
