@@ -43,7 +43,7 @@
 (require 'paredit)
 (evil-mode 1)
 (paredit-mode 1) 
-
+(global-linum-mode 1)
 
 (visual-line-mode 1)
 (show-paren-mode t)
