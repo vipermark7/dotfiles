@@ -14,10 +14,10 @@
 (cua-mode t)
 '(inhibit-startup-screen t)
 (setq initial-frame-alist '(
-			    (top . 200)
-			    (left . 200)
-			    (width . 200)
-			    (height . 200)))
+			    (top . 50)
+			    (left . 70)
+			    (width . 50)
+			    (height . 70)))
 
 
 (package-initialize)
