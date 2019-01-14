@@ -19,6 +19,9 @@
 			    (width . 50)
 			    (height . 70)))
 
+(package-install 'js2-mode)
+(package-install 'js2-refactor)
+(package-install 'xref-js2)
 (require 'js2-mode)
 (add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
 
@@ -66,7 +69,7 @@
 
 (visual-line-mode 1)
 (show-paren-mode t)
-(load-theme 'leuven 'no-confirm)
+(load-theme 'gruvbox-dark-medium 'no-confirm)
 (add-hook 'prog-mode-hook #'rainbow-delimiters-mode)
 (rainbow-delimiters-mode)
 (custom-set-faces
@@ -75,5 +78,4 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
-
 
