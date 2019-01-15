@@ -12,6 +12,7 @@
 (add-to-list 'package-archives '("marmalade". "http://marmalade-repo.org/packages/"))
 (add-to-list 'package-archives '("gnu". "http://elpa.gnu.org/packages/"))
 (cua-mode t)
+(setq default-tab-width 4)
 '(inhibit-startup-screen t)
 (setq initial-frame-alist '(
 			    (top . 50)
