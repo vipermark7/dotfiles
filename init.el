@@ -12,8 +12,10 @@
 (add-to-list 'package-archives '("marmalade". "http://marmalade-repo.org/packages/"))
 (add-to-list 'package-archives '("gnu". "http://elpa.gnu.org/packages/"))
 (cua-mode t)
+
+;; set tab width to 4 spaces
 (setq default-tab-width 4)
-'(inhibit-startup-screen t)
+(setq inhibit-startup-screen t)
 (setq initial-frame-alist '(
 			    (top . 50)
 			    (left . 70)
@@ -45,11 +47,8 @@
 
 (package-initialize)
 ;; Set your lisp system and, optionally, some contribs
-(setq inferior-lisp-program "/usr/bin/sbcl")
 (setq slime-contribs '(slime-fancy))
-(if (eq system-type "windows-nt")
-    (setq inferior-lisp-program (executable-find "sbcl"))
-     (message "sbcl not found"))
+(setq inferior-lisp-program (executable-find "sbcl"))
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -70,7 +69,7 @@
 
 (visual-line-mode 1)
 (show-paren-mode t)
-(load-theme 'gruvbox-dark-medium 'no-confirm)
+(load-theme 'base16-solarized-dark 'no-confirm)
 (add-hook 'prog-mode-hook #'rainbow-delimiters-mode)
 (rainbow-delimiters-mode)
 (custom-set-faces
@@ -79,4 +78,5 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
+
 
