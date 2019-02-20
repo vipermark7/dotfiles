@@ -17,10 +17,10 @@
 (setq default-tab-width 4)
 (setq inhibit-startup-screen t)
 (setq initial-frame-alist '(
-			    (top . 50)
+			    (top . 30)
 			    (left . 70)
-			    (width . 50)
-			    (height . 70)))
+			    (width . 70)
+			    (height . 30)))
 
 (package-install 'js2-mode)
 (package-install 'js2-refactor)
