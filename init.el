@@ -11,6 +11,7 @@
    t))
 (add-to-list 'package-archives '("marmalade". "http://marmalade-repo.org/packages/"))
 (add-to-list 'package-archives '("gnu". "http://elpa.gnu.org/packages/"))
+(package-initialize)
 (cua-mode t)
 
 ;; set tab width to 4 spaces
@@ -45,7 +46,6 @@
 (add-hook 'js2-mode-hook (lambda ()
   (add-hook 'xref-backend-functions #'xref-js2-xref-backend nil t)))
 
-(package-initialize)
 ;; Set your lisp system and, optionally, some contribs
 (setq slime-contribs '(slime-fancy))
 (setq inferior-lisp-program (executable-find "sbcl"))
