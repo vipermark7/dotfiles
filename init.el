@@ -69,7 +69,7 @@
 
 (visual-line-mode 1)
 (show-paren-mode t)
-(load-theme 'base16-solarized-dark 'no-confirm)
+(load-theme 'one-dark 'no-confirm)
 (add-hook 'prog-mode-hook #'rainbow-delimiters-mode)
 (rainbow-delimiters-mode)
 (custom-set-faces
