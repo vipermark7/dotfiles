@@ -76,14 +76,6 @@ You should not put any user code in there besides modifying the variable
 values."
   ;; This setq-default sexp is an exhaustive list of all the supported
   ;; spacemacs settings.
-  (setq configuration-layer--elpa-archives
-      '(("melpa" . "elpa.zilongshanren.com/melpa/")
-        ("org" . "elpa.zilongshanren.com/org/")
-        ("gnu" . "elpa.zilongshanren.com/gnu/"))) 	
-  (setq configuration-layer--elpa-archives
-        '(("melpa" . "elpa.zilongshanren.com/melpa/")
-          ("org" . "elpa.zilongshanren.com/org/")
-          ("gnu" . "elpa.zilongshanren.com/gnu/")))
   (setq-default
    ;; If non nil ELPA repositories are contacted via HTTPS whenever it's
    ;; possible. Set it to nil if you have no way to use HTTPS in your
@@ -317,7 +309,11 @@ layers configuration.
 This is the place where most of your configurations should be done. Unless it is
 explicitly specified that a variable should be set before a package is loaded,
 you should place your code here."
-  )
+
+(setq configuration-layer--elpa-archives
+      '(("melpa" . "elpa.zilongshanren.com/melpa/")
+        ("org" . "elpa.zilongshanren.com/org/")
+        ("gnu" . "elpa.zilongshanren.com/gnu/")))
 
 ;; Do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.
