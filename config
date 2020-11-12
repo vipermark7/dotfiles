@@ -46,6 +46,11 @@ exec --no-startup-id redshift-gtk
 exec --no-startup-id nitrogen --restore
 exec --no-startup-id volumeicon
 exec --no-startup-id xfce4-power-manager
+# run gnome-keyring on startup so google chrome doesn't forget my passwords
+exec --no-startup-id /usr/bin/gnome-keyring-daemon --start --components=secrets
+# increase DPI for easier viewing
+exec "xrandr --dpi 150"
+
 # change focus
 bindsym $mod+j focus left
 bindsym $mod+k focus down
