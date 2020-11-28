@@ -32,7 +32,7 @@ floating_modifier $mod
 # start a terminal
 bindsym $mod+Return exec gnome-terminal
 bindsym $mod+t exec thunar 
-bindsym $mod+g exec google-chrome-stable
+bindsym $mod+g exec google-chrome-stable --password-store=gnome
 bindsym $mod+p exec vlc 
 
 # kill focused window
