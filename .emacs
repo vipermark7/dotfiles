@@ -28,7 +28,7 @@
 (package-install 'xref-js2)
 (require 'js2-mode)
 (add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
-aa
+
 ;; Better imenu
 (add-hook 'js2-mode-hook #'js2-imenu-extras-mode)
 
@@ -55,11 +55,8 @@ aa
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(custom-safe-themes
-   (quote
-    ("60e09d2e58343186a59d9ed52a9b13d822a174b33f20bdc1d4abb86e6b17f45b" "fede08d0f23fc0612a8354e0cf800c9ecae47ec8f32c5f29da841fe090dfc450" "527df6ab42b54d2e5f4eec8b091bd79b2fa9a1da38f5addd297d1c91aa19b616" "3380a2766cf0590d50d6366c5a91e976bdc3c413df963a0ab9952314b4577299" "021720af46e6e78e2be7875b2b5b05344f4e21fad70d17af7acfd6922386b61e" "e1498b2416922aa561076edc5c9b0ad7b34d8ff849f335c13364c8f4276904f0" default)))
- '(package-selected-packages
-   (quote
-    (racket-mode eslime-company ace-window ace-link ace-jump-helm-line ac-cider auto-highlight-symbol auto-compile aggressive-indent adaptive-wrap column-enforce-mode clomacs clean-aindent-mode base16-theme evil-anzu eval-sexp-fu elisp-slime-nav dumb-jump diminish define-word evil-iedit-state evil-exchange evil-escape evil-ediff evil-args evil-mc evil-matchit evil-lisp-state evil-indent-plus evil-search-highlight-persist evil-numbers evil-nerd-commenter evil-visual-mark-mode evil-unimpaired evil-tutor evil-surround expand-region exec-path-from-shell evil-visualstar golden-ratio flx-ido fill-column-indicator fancy-battery eyebrowse helm-flx helm-descbinds helm-cider helm-ag google-translate helm-themes helm-swoop helm-projectile helm-mode-manager helm-make highlight-parentheses highlight-numbers highlight-indentation linum-relative link-hint indent-guide hungry-delete hl-todo open-junk-file neotree multi-term move-text lorem-ipsum popwin persp-mode pcre2el paradox org-plus-contrib org-bullets toc-org spaceline slime restart-emacs request rainbow-delimiters which-key volatile-highlights vi-tilde-fringe uuidgen use-package gruvbox-theme gruvbox-theme paredit rainbow-identifiers ws-butler winum))))
+   '("60e09d2e58343186a59d9ed52a9b13d822a174b33f20bdc1d4abb86e6b17f45b" "fede08d0f23fc0612a8354e0cf800c9ecae47ec8f32c5f29da841fe090dfc450" "527df6ab42b54d2e5f4eec8b091bd79b2fa9a1da38f5addd297d1c91aa19b616" "3380a2766cf0590d50d6366c5a91e976bdc3c413df963a0ab9952314b4577299" "021720af46e6e78e2be7875b2b5b05344f4e21fad70d17af7acfd6922386b61e" "e1498b2416922aa561076edc5c9b0ad7b34d8ff849f335c13364c8f4276904f0" default))
+ '(package-selected-packages nil))
 (package-install-selected-packages)
 (require 'evil)
 (require 'paredit)
@@ -69,7 +66,7 @@ aa
 
 (visual-line-mode 1)
 (show-paren-mode t)
-(load-theme 'one-dark 'no-confirm)
+(load-theme 'base16-onedark 'no-confirm)
 (add-hook 'prog-mode-hook #'rainbow-delimiters-mode)
 (rainbow-delimiters-mode)
 (custom-set-faces
