@@ -34,6 +34,7 @@ bindsym $mod+Return exec gnome-terminal
 bindsym $mod+t exec thunar 
 bindsym $mod+g exec google-chrome-stable --password-store=gnome
 bindsym $mod+p exec vlc 
+bindsym $mod+l exec i3lock
 
 # kill focused window
 bindsym $mod+q kill

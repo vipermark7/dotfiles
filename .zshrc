@@ -60,6 +60,8 @@ ZSH_THEME="af-magic"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
   git
+  zsh-syntax-highlighting
+  zsh-autosuggestions
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -92,7 +94,11 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-export PATH=$PATH:/mnt/c/Program\ Files\ \(x86\)/Xming/
-alias win_emacs="Xming.exe && lxqt-sudo dropbear && export DISPLAY=:0 && emacs26"
+
+export PATH="$HOME/Downloads/apache-tomcat/bin:$PATH:/home/spacey/.gem/ruby/2.7.0/bin:/bin:/usr/bin:/sbin:/usr/sbin:/usr/local/bin"
 alias ls="ls -a --color"
 export DISPLAY=:0
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="/home/spacey/.sdkman"
+[[ -s "/home/spacey/.sdkman/bin/sdkman-init.sh" ]] && source "/home/spacey/.sdkman/bin/sdkman-init.sh"
