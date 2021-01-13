@@ -1,6 +1,9 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
+# install oh-my-zsh
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
 # Path to your oh-my-zsh installation.
   export ZSH=~/.oh-my-zsh
 
@@ -95,7 +98,7 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-export PATH="$HOME/Downloads/apache-tomcat/bin:$PATH:/home/spacey/.gem/ruby/2.7.0/bin:/bin:/usr/bin:/sbin:/usr/sbin:/usr/local/bin"
+export PATH="$HOME/Downloads/apache-tomcat/bin:$PATH:/home/spacey/.gem/ruby/2.7.0/bin:/bin:/usr/bin:/sbin:/usr/sbin:/usr/local/bin:/var/lib/flatpak/exports/bin"
 alias ls="ls -a --color"
 export DISPLAY=:0
 
