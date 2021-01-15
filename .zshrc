@@ -100,6 +100,7 @@ source $ZSH/oh-my-zsh.sh
 
 export PATH="$HOME/Downloads/apache-tomcat/bin:$PATH:/home/spacey/.gem/ruby/2.7.0/bin:/bin:/usr/bin:/sbin:/usr/sbin:/usr/local/bin:/var/lib/flatpak/exports/bin"
 alias ls="ls -a --color"
+alias code="flatpak run com.visualstudio.code-oss"
 export DISPLAY=:0
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
