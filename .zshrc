@@ -98,11 +98,9 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-export PATH="$HOME/Downloads/apache-tomcat/bin:$PATH:/home/spacey/.gem/ruby/2.7.0/bin:/bin:/usr/bin:/sbin:/usr/sbin:/usr/local/bin:/var/lib/flatpak/exports/bin"
+export PATH="$HOME/Downloads/apache-tomcat/bin:$PATH:/home/spacey/.gem/ruby/2.7.0/bin:/bin:/usr/bin:/sbin:/usr/sbin:/usr/local/bin:/var/lib/flatpak/exports/bin:/home/spacey/Downloads/idea-IC-203.7148.57/bin/"
 alias ls="ls -a --color"
-alias code="flatpak run com.visualstudio.code-oss"
-export DISPLAY=:0
-
+clear
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="/home/spacey/.sdkman"
 [[ -s "/home/spacey/.sdkman/bin/sdkman-init.sh" ]] && source "/home/spacey/.sdkman/bin/sdkman-init.sh"

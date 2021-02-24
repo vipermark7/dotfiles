@@ -26,7 +26,7 @@
 (package-install 'js2-mode)
 (package-install 'js2-refactor)
 (package-install 'xref-js2)
-(package-install 'evil)
+(package-install 'evil 'paredit)
 (require 'js2-mode)
 (add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
 
