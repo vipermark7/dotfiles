@@ -1,5 +1,6 @@
 (setq user-full-name "Shaffan")
 (setq user-mail-address "shaffan1996@gmail.com")
+(setq gnutls-algorithm-priority "NORMAL:-VERS-TLS1.3")
 (setq project-default-licence "GPL")
 (require 'package)
 (add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/"))
@@ -13,6 +14,7 @@
 (add-to-list 'package-archives '("gnu". "http://elpa.gnu.org/packages/"))
 (package-initialize)
 (cua-mode t)
+(visual-line-mode t)
 
 ;; set tab width to 4 spaces
 (setq default-tab-width 4)
@@ -23,10 +25,7 @@
 			    (width . 70)
 			    (height . 30)))
 
-(package-install 'js2-mode)
-(package-install 'js2-refactor)
-(package-install 'xref-js2)
-(package-install 'evil)
+
 (require 'js2-mode)
 (add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
 
@@ -56,8 +55,11 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(custom-safe-themes
-   '("60e09d2e58343186a59d9ed52a9b13d822a174b33f20bdc1d4abb86e6b17f45b" "fede08d0f23fc0612a8354e0cf800c9ecae47ec8f32c5f29da841fe090dfc450" "527df6ab42b54d2e5f4eec8b091bd79b2fa9a1da38f5addd297d1c91aa19b616" "3380a2766cf0590d50d6366c5a91e976bdc3c413df963a0ab9952314b4577299" "021720af46e6e78e2be7875b2b5b05344f4e21fad70d17af7acfd6922386b61e" "e1498b2416922aa561076edc5c9b0ad7b34d8ff849f335c13364c8f4276904f0" default))
- '(package-selected-packages nil))
+   '("6145e62774a589c074a31a05dfa5efdf8789cf869104e905956f0cbd7eda9d0e" "60e09d2e58343186a59d9ed52a9b13d822a174b33f20bdc1d4abb86e6b17f45b" "fede08d0f23fc0612a8354e0cf800c9ecae47ec8f32c5f29da841fe090dfc450" "527df6ab42b54d2e5f4eec8b091bd79b2fa9a1da38f5addd297d1c91aa19b616" "3380a2766cf0590d50d6366c5a91e976bdc3c413df963a0ab9952314b4577299" "021720af46e6e78e2be7875b2b5b05344f4e21fad70d17af7acfd6922386b61e" "e1498b2416922aa561076edc5c9b0ad7b34d8ff849f335c13364c8f4276904f0" default))
+ '(font-use-system-font t)
+ '(package-selected-packages
+   '(js2-mode evil js2-refactor xref-js2 evil paredit base16-theme rainbow-delimiters) nil (js2-refactor))
+ '(show-paren-mode t))
 (package-install-selected-packages)
 (require 'evil)
 (require 'paredit)
