@@ -44,7 +44,7 @@
 
 ;; Set your lisp system and, optionally, some contribs
 (setq slime-contribs '(slime-fancy))
-(setq inferior-lisp-program (executable-find "racket"))
+(setq inferior-lisp-program (executable-find "clojure"))
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
