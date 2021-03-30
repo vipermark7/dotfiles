@@ -158,6 +158,8 @@ if !exists(":DiffOrig")
 		  \ | wincmd p | diffthis
 endif
 
+set nobackup
+set noundofile
 set expandtab
 set shiftwidth=2
 set softtabstop=2
