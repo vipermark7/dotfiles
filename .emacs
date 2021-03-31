@@ -8,18 +8,19 @@
 (cua-mode t)
 (visual-line-mode t)
 
-(setq package-archives
-    ("gnu" . "https://elpa.gnu.org/packages/")
-    ("melpa" . "https://melpa.org/packages/"))
+(add-to-list 'package-archives
+ '("gnu" . "https://elpa.gnu.org/packages/"))
+(add-to-list 'package-archives
+ '("melpa" . "https://melpa.org/packages/"))
 
 ;; set tab width to 4 spaces
 (setq default-tab-width 4)
 (setq inhibit-startup-screen t)
 (setq initial-frame-alist '(
-			    (top . 30)
-			    (left . 70)
-			    (width . 70)
-			    (height . 30)))
+ (top . 30)
+ (left . 70)
+ (width . 70)
+ (height . 30)))
 
 
 (require 'js2-mode)
@@ -35,28 +36,28 @@
 (js2r-add-keybindings-with-prefix "C-c C-r")
 (define-key js2-mode-map (kbd "C-k") #'js2r-kill)
 
+
 ;; js-mode (which js2 is based on) binds "M-." which conflicts with xref, so
 ;; unbind it.
 (define-key js-mode-map (kbd "M-.") nil)
 
 (add-hook 'js2-mode-hook (lambda ()
-  (add-hook 'xref-backend-functions #'xref-js2-xref-backend nil t)))
+ (add-hook 'xref-backend-functions #'xref-js2-xref-backend nil t)))
+
 
 ;; Set your lisp system and, optionally, some contribs
 (setq slime-contribs '(slime-fancy))
-(setq inferior-lisp-program (executable-find "racket"))
+ (setq inferior-lisp-program (executable-find "racket"))
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
-   '(cider xref-js2 smartparens rainbow-delimiters parinfer-rust-mode paredit js2-refactor evil base16-theme)))
+   (quote
+    (parinfer use-package cider xref-js2 smartparens rainbow-delimiters parinfer-rust-mode paredit js2-refactor evil base16-theme))))
 (package-install-selected-packages)
-(require 'evil)
-(require 'paredit)
-(evil-mode 1)
-y(paredit-mode 1) 
+
 (global-linum-mode 1)
 
 (visual-line-mode 1)
@@ -71,4 +72,22 @@ y(paredit-mode 1)
  ;; If there is more than one, they won't work right.
  '(default ((t (:inherit nil :extend nil :stipple nil :background "#00002a" :foreground "#d0d0fa" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 130 :width normal :family "Fira Mono")))))
 
-
+(use-package parinfer
+  :ensure t
+  :bind
+  (("C-," . parinfer-toggle-mode))
+  :init
+  (progn
+    (setq parinfer-extensions
+          '(defaults       ; should be included.
+            pretty-parens  ; different paren styles for different modes.
+            evil           ; If you use Evil.
+            lispy          ; If you use Lispy. With this extension, you should install Lispy and do not enable lispy-mode directly.
+            paredit        ; Introduce some paredit commands.
+            smart-tab      ; C-b & C-f jump positions and smart shift with tab & S-tab.
+            smart-yank))   ; Yank behavior depend on mode.
+    (add-hook 'clojure-mode-hook #'parinfer-mode)
+    (add-hook 'emacs-lisp-mode-hook #'parinfer-mode)
+    (add-hook 'common-lisp-mode-hook #'parinfer-mode)
+    (add-hook 'scheme-mode-hook #'parinfer-mode)
+    (add-hook 'lisp-mode-hook #'parinfer-mode)))
