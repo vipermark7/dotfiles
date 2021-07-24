@@ -30,13 +30,13 @@ font pango:ubuntu 12
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec gnome-terminal
+bindsym $mod+Return exec xfce4-terminal
 bindsym $mod+t exec thunar 
 bindsym $mod+g exec google-chrome-stable --password-store=gnome
 bindsym $mod+p exec vlc 
 
 # kill focused window
-bindsym $mod+q kill
+bindsym $mod+shift+q kill
 
 bindsym $mod+c exec rofi -show run
 bindsym $mod+d exec rofi -show drun
@@ -45,11 +45,12 @@ bindsym $mod+d exec rofi -show drun
 exec --no-startup-id redshift-gtk
 exec --no-startup-id nitrogen --restore
 exec --no-startup-id volumeicon
+exec --no-startup-id nm-applet
 exec --no-startup-id xfce4-power-manager
 # run gnome-keyring on startup so google chrome doesn't forget my passwords
 exec --no-startup-id /usr/bin/gnome-keyring-daemon --start --components=secrets
 # increase DPI for easier viewing
-exec "xrandr --dpi 150"
+exec "xrandr --dpi 125"
 
 # change focus
 bindsym $mod+j focus left
